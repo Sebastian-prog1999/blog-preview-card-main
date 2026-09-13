@@ -1,0 +1,103 @@
+:root {
+  --yellow: #f4d04e;
+  --black: #111111;
+  --grey: #7f7f7f;
+  --white: #ffffff;
+  --shadow: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Figtree", sans-serif;
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.card-container {
+  width: min(90vw, 384px);
+  background: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 8px 8px 0 var(--black);
+}
+
+.card-img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tag {
+  align-self: flex-start;
+  text-decoration: none;
+  background: var(--yellow);
+  color: var(--black);
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.date {
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(1.7rem, 2vw, 2.1rem);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.description {
+  color: var(--grey);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.perfil img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+@media (max-width: 420px) {
+  .card-container {
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 6px 6px 0 var(--black);
+  }
+
+  .card-img {
+    margin-bottom: 18px;
+  }
+
+  .card-content {
+    gap: 12px;
+  }
+}
